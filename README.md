@@ -16,7 +16,7 @@ pnpm i cli-tool-sample-rollup
 % pnpm print -h
 Usage: index [options]
 
-Split a string into substrings and display as an array
+Display strings in console
 
 Options:
   -w, --word <char>   somthing display word

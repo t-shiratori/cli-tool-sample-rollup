@@ -3,7 +3,7 @@ import { colorPrint } from './common/utils'
 import { COLOR_MAP_KEYS } from './common/const'
 ;(() => {
   program
-    .description('Split a string into substrings and display as an array')
+    .description('Display strings in console')
     .option('-w, --word <char>', 'somthing display word')
     .option('-c, --color <char>', `colorKey [${COLOR_MAP_KEYS.toString()}]`)
 

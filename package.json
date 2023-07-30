@@ -2,7 +2,7 @@
   "name": "cli-tool-sample-rollup",
   "version": "0.0.0",
   "type": "module",
-  "main": "./dist/index.umd.cjs",
+  "main": "./dist/index.js",
   "module": "./dist/index.js",
   "author": "takashi_shiratori",
   "bin": {
@@ -12,8 +12,9 @@
     "dist/index.js"
   ],
   "scripts": {
-    "build": "rollup --config rollup.config.js",
-    "l": "pnpm link ./"
+    "build": "pnpm clean && rollup --config rollup.config.js",
+    "l": "pnpm link ./",
+    "clean": "rimraf dist"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^25.0.3",
@@ -22,6 +23,7 @@
     "@rollup/plugin-typescript": "^11.1.2",
     "@types/node": "^20.4.5",
     "commander": "^11.0.0",
+    "rimraf": "^5.0.1",
     "rollup": "^3.27.0",
     "tslib": "^2.6.1"
   }

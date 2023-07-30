@@ -28,4 +28,6 @@ export const PRINT_COLOR_MAP_ORIGIN = {
   bw: PRINT_COLOR.BG.WHITE,
 }
 
+export const COLOR_MAP_KEYS = Object.keys(PRINT_COLOR_MAP_ORIGIN)
+
 export const PRINT_COLOR_MAP = new Map(Object.entries(PRINT_COLOR_MAP_ORIGIN))

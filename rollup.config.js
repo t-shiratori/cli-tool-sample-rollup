@@ -10,10 +10,6 @@ export default {
     {
       file: 'dist/index.js',
       format: 'es',
-    },
-    {
-      file: 'dist/index.min.js',
-      format: 'es',
       plugins: [terser()],
     },
   ],

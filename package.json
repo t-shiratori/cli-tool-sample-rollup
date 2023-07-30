@@ -1,0 +1,23 @@
+{
+  "name": "cli-tool-sample-rollup",
+  "version": "0.0.0",
+  "type": "module",
+  "main": "./dist/index.umd.cjs",
+  "module": "./dist/index.js",
+  "author": "takashi_shiratori",
+  "bin": {
+    "speaker": "dist/index.js"
+  },
+  "files": [
+    "dist/index.js"
+  ],
+  "scripts": {
+    "build": "rollup --config rollup.config.js",
+    "l": "pnpm link ./"
+  },
+  "devDependencies": {
+    "@rollup/plugin-terser": "^0.4.3",
+    "@types/node": "^20.4.5",
+    "rollup": "^3.27.0"
+  }
+}

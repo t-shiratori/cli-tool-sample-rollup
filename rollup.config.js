@@ -1,9 +1,9 @@
 import shebangPlugin from './rollup-plugins/rollup-plugin-shebang.js'
 import terser from '@rollup/plugin-terser'
+import typescript from '@rollup/plugin-typescript'
 
 export default {
   input: 'src/index.ts',
-  plugins: [shebangPlugin()],
   output: [
     {
       file: 'dist/index.js',
@@ -15,4 +15,5 @@ export default {
       plugins: [terser()],
     },
   ],
+  plugins: [typescript(), shebangPlugin()],
 }

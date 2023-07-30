@@ -6,7 +6,7 @@
   "module": "./dist/index.js",
   "author": "takashi_shiratori",
   "bin": {
-    "speaker": "dist/index.js"
+    "print": "dist/index.js"
   },
   "files": [
     "dist/index.js"

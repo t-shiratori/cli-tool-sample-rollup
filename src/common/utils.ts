@@ -1,9 +1,11 @@
-import { PRINT_COLOR } from './const'
+import { PRINT_COLOR, PRINT_COLOR_MAP_ORIGIN, PRINT_COLOR_MAP } from './const'
 
 type TPrintArgs = {
-  words: string
+  word?: string
+  colorKey?: keyof typeof PRINT_COLOR_MAP_ORIGIN
 }
 
-export const colorPrint = ({ words }: TPrintArgs) => {
-  console.log(`${PRINT_COLOR.FG.GREEN}${words}${PRINT_COLOR.RESET}`)
+export const colorPrint = ({ word = 'hello', colorKey = 'fw' }: TPrintArgs) => {
+  const color = PRINT_COLOR_MAP.get(colorKey) ?? PRINT_COLOR.FG.WHITE
+  console.log(`${color}${word}${PRINT_COLOR.RESET}`)
 }
